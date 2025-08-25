@@ -1,0 +1,132 @@
+/* ShopFlow Welcome Page Styles */
+
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #667eea 0%, #764ba2 100%);
+}
+
+.welcome-card {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 15;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 5);
+}
+
+.feature-card {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 3);
+}
+
+.feature-card:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-cursor: hand;
+}
+
+.get-started-btn {
+    -fx-background-color: #FF6B6B;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 3);
+}
+
+.get-started-btn:hover {
+    -fx-background-color: #FF5252;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.learn-more-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-cursor: hand;
+}
+
+.learn-more-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.title-main {
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 2, 2);
+}
+
+.title-sub {
+    -fx-text-fill: #E8E8E8;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 18px;
+}
+
+.welcome-message {
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.welcome-subtitle {
+    -fx-text-fill: #F0F0F0;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 16px;
+}
+
+.feature-title {
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.feature-description {
+    -fx-text-fill: #E0E0E0;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 11px;
+}
+
+.footer-text {
+    -fx-text-fill: #C0C0C0;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 12px;
+}
+
+.top-bar {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    -fx-padding: 15;
+}
+
+.demo-badge {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+    -fx-font-size: 11px;
+    -fx-padding: 5 15 5 15;
+}
+
+.version-label {
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 12px;
+}
+
+/* Animation classes */
+.fade-in {
+    -fx-opacity: 0;
+}
+
+.slide-up {
+    -fx-translate-y: 50;
+    -fx-opacity: 0;
+}

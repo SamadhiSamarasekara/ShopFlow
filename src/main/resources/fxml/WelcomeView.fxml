@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shop.controller.WelcomeController" style="-fx-background-color: linear-gradient(to bottom right, #667eea 0%, #764ba2 100%);">
+   
+   <center>
+      <VBox alignment="CENTER" spacing="40.0" maxWidth="800.0">
+         <VBox.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </VBox.margin>
+         
+         <!-- Logo/Icon Section -->
+         <VBox alignment="CENTER" spacing="20.0">
+            <HBox alignment="CENTER" spacing="15.0">
+               <!-- Shop Icon with gradient effect -->
+               <Label text="🏪" style="-fx-font-size: 72px;">
+                  <effect>
+                     <DropShadow color="#00000060" offsetX="3.0" offsetY="3.0" radius="8.0" />
+                  </effect>
+               </Label>
+               <VBox alignment="CENTER_LEFT" spacing="5.0">
+                  <Label text="ShopFlow" textFill="WHITE" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 48px; -fx-font-weight: bold;">
+                     <effect>
+                        <DropShadow color="#00000050" offsetX="2.0" offsetY="2.0" radius="5.0" />
+                     </effect>
+                  </Label>
+                  <Label text="Management System" textFill="#E8E8E8" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 18px;" />
+               </VBox>
+            </HBox>
+         </VBox>
+         
+         <!-- Welcome Message -->
+         <VBox alignment="CENTER" spacing="15.0" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-background-radius: 15; -fx-padding: 30;">
+            <effect>
+               <DropShadow color="#00000030" offsetX="0.0" offsetY="5.0" radius="15.0" />
+            </effect>
+            
+            <Label text="Welcome to the Future of Retail Management" textFill="WHITE" textAlignment="CENTER" wrapText="true" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 24px; -fx-font-weight: bold;" />
+            <Label text="Streamline your business operations with our comprehensive shop management solution" textFill="#F0F0F0" textAlignment="CENTER" wrapText="true" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16px;" />
+         </VBox>
+         
+         <!-- Features Grid with enhanced styling -->
+         <GridPane alignment="CENTER" hgap="20.0" vgap="20.0" maxWidth="600.0">
+            <!-- Products Feature -->
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 10; -fx-padding: 20;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+               <Label text="📦" style="-fx-font-size: 36px;">
+                  <effect>
+                     <DropShadow color="#00000040" offsetX="2.0" offsetY="2.0" radius="5.0" />
+                  </effect>
+               </Label>
+               <Label text="Product Management" textFill="WHITE" textAlignment="CENTER" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" />
+               <Label text="Manage inventory, track stock levels, and organize products with advanced categorization" textFill="#E0E0E0" textAlignment="CENTER" wrapText="true" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 11px;" />
+            </VBox>
+            
+            <!-- Customers Feature -->
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 10; -fx-padding: 20;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <Label text="👥" style="-fx-font-size: 36px;">
+                  <effect>
+                     <DropShadow color="#00000040" offsetX="2.0" offsetY="2.0" radius="5.0" />
+                  </effect>
+               </Label>
+               <Label text="Customer Relations" textFill="WHITE" textAlignment="CENTER" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" />
+               <Label text="Build lasting relationships with comprehensive customer profiles and communication tools" textFill="#E0E0E0" textAlignment="CENTER" wrapText="true" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 11px;" />
+            </VBox>
+            
+            <!-- Orders Feature -->
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 10; -fx-padding: 20;" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <Label text="📋" style="-fx-font-size: 36px;">
+                  <effect>
+                     <DropShadow color="#00000040" offsetX="2.0" offsetY="2.0" radius="5.0" />
+                  </effect>
+               </Label>
+               <Label text="Order Processing" textFill="WHITE" textAlignment="CENTER" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" />
+               <Label text="Streamline order fulfillment from creation to delivery with real-time tracking" textFill="#E0E0E0" textAlignment="CENTER" wrapText="true" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 11px;" />
+            </VBox>
+            
+            <!-- Payments Feature -->
+            <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.15); -fx-background-radius: 10; -fx-padding: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <Label text="💳" style="-fx-font-size: 36px;">
+                  <effect>
+                     <DropShadow color="#00000040" offsetX="2.0" offsetY="2.0" radius="5.0" />
+                  </effect>
+               </Label>
+               <Label text="Payment Processing" textFill="WHITE" textAlignment="CENTER" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" />
+               <Label text="Secure payment handling with multiple methods and automated reconciliation" textFill="#E0E0E0" textAlignment="CENTER" wrapText="true" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 11px;" />
+            </VBox>
+            
+            <columnConstraints>
+               <ColumnConstraints hgrow="ALWAYS" />
+               <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+         </GridPane>
+         
+         <!-- Action Buttons with enhanced styling -->
+         <HBox alignment="CENTER" spacing="20.0">
+            <Button fx:id="btnGetStarted" text="🚀 Get Started" onAction="#handleGetStarted" prefWidth="160.0" prefHeight="50.0" style="-fx-background-color: #FF6B6B; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 25; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow color="#00000040" offsetX="0.0" offsetY="3.0" radius="8.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnAbout" text="📖 Learn More" onAction="#handleAbout" prefWidth="140.0" prefHeight="50.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-color: white; -fx-border-width: 2; -fx-background-radius: 25; -fx-border-radius: 25; -fx-cursor: hand;" />
+         </HBox>
+         
+         <!-- Additional Info Section -->
+         <HBox alignment="CENTER" spacing="30.0">
+            <VBox alignment="CENTER" spacing="5.0">
+               <Label text="⚡" style="-fx-font-size: 24px;" />
+               <Label text="Fast Setup" textFill="WHITE" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" />
+               <Label text="Ready in minutes" textFill="#E0E0E0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 11px;" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5.0">
+               <Label text="🔒" style="-fx-font-size: 24px;" />
+               <Label text="Secure" textFill="WHITE" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" />
+               <Label text="Bank-level security" textFill="#E0E0E0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 11px;" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5.0">
+               <Label text="📊" style="-fx-font-size: 24px;" />
+               <Label text="Analytics" textFill="WHITE" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" />
+               <Label text="Real-time insights" textFill="#E0E0E0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 11px;" />
+            </VBox>
+         </HBox>
+         
+         <!-- Footer -->
+         <VBox alignment="CENTER" spacing="10.0">
+            <Label text="Powered by JavaFX • Built with ❤️ for Retail Excellence" textFill="#C0C0C0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 12px;" />
+            <Label text="© 2025 ShopFlow Systems. All rights reserved." textFill="#C0C0C0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 12px;" />
+         </VBox>
+      </VBox>
+   </center>
+   
+   <!-- Top Navigation Bar -->
+   <top>
+      <HBox alignment="CENTER_RIGHT" spacing="15.0" style="-fx-background-color: rgba(0, 0, 0, 0.1); -fx-padding: 15;">
+         <Label text="🌟 ShopFlow v1.0" textFill="WHITE" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 12px;" />
+         <Region HBox.hgrow="ALWAYS" />
+         <Label text="Demo Mode" style="-fx-background-color: rgba(255, 255, 255, 0.2); -fx-text-fill: white; -fx-background-radius: 15; -fx-font-size: 11px; -fx-padding: 5 15 5 15;" />
+      </HBox>
+   </top>
+</BorderPane>

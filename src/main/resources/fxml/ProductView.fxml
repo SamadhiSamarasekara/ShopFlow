@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shop.controller.ProductController">
+   <children>
+      <Label text="Product Management" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      
+      <!-- Product Input Form -->
+      <VBox spacing="10.0" style="-fx-background-color: #f8f9fa; -fx-background-radius: 10;">
+         <children>
+            <Label text="Product Information" textFill="#2c3e50">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            
+            <GridPane hgap="10.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="120.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="120.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <!-- Row 1 -->
+                  <Label text="Product Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <TextField fx:id="txtProductName" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  
+                  <Label text="SKU:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                  <TextField fx:id="txtSku" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                  
+                  <!-- Row 2 -->
+                  <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  
+                  <Label text="Cost Price:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtCostPrice" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  
+                  <!-- Row 3 -->
+                  <Label text="Stock Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtStockQuantity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  
+                  <Label text="Min Stock Level:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtMinStockLevel" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  
+                  <!-- Row 4 -->
+                  <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cmbCategory" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  
+                  <Label text="Active:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <CheckBox fx:id="chkIsActive" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  
+                  <!-- Row 5 -->
+                  <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                  <TextArea fx:id="txtDescription" prefRowCount="3" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            
+            <!-- Buttons -->
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#handleSaveAction" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Save" />
+                  <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#handleEditAction" style="-fx-background-color: #f39c12; -fx-text-fill: white;" text="Edit" />
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleDeleteAction" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Delete" />
+                  <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleClearAction" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" text="Clear" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+      </VBox>
+      
+      <!-- Products Table -->
+      <VBox spacing="10.0">
+         <children>
+            <Label text="Products List" textFill="#2c3e50">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            
+            <TableView fx:id="tableProducts" prefHeight="400.0">
+               <columns>
+                  <TableColumn fx:id="colProductId" prefWidth="80.0" text="ID" />
+                  <TableColumn fx:id="colProductName" prefWidth="200.0" text="Product Name" />
+                  <TableColumn fx:id="colSku" prefWidth="120.0" text="SKU" />
+                  <TableColumn fx:id="colPrice" prefWidth="100.0" text="Price" />
+                  <TableColumn fx:id="colStock" prefWidth="100.0" text="Stock" />
+                  <TableColumn fx:id="colCategory" prefWidth="150.0" text="Category" />
+                  <TableColumn fx:id="colIsActive" prefWidth="100.0" text="Status" />
+               </columns>
+            </TableView>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>

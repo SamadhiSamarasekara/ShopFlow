@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shop.controller.CustomerController">
+   <children>
+      <!-- Header -->
+      <Label text="Customer Management" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      
+      <HBox spacing="20.0">
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" bottom="20.0" />
+         </VBox.margin>
+         
+         <!-- Form Panel -->
+         <VBox spacing="10.0" prefWidth="400.0">
+            <Label text="Customer Information" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+            
+            <GridPane hgap="10.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="120.0" />
+                  <ColumnConstraints hgrow="ALWAYS" />
+               </columnConstraints>
+               
+               <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+               <TextField fx:id="txtFirstName" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+               
+               <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+               <TextField fx:id="txtLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               
+               <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+               <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               
+               <Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+               <TextField fx:id="txtPhoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               
+               <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+               <TextField fx:id="txtAddress" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               
+               <Label text="City:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+               <TextField fx:id="txtCity" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               
+               <Label text="Postal Code:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+               <TextField fx:id="txtPostalCode" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               
+               <Label text="Country:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+               <TextField fx:id="txtCountry" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               
+               <Label text="Active:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+               <CheckBox fx:id="chkIsActive" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            </GridPane>
+            
+            <!-- Buttons -->
+            <HBox spacing="10.0" alignment="CENTER_LEFT">
+               <Button fx:id="btnSave" text="Save" onAction="#handleSave" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" prefWidth="80.0" />
+               <Button fx:id="btnEdit" text="Edit" onAction="#handleEdit" style="-fx-background-color: #f39c12; -fx-text-fill: white;" prefWidth="80.0" />
+               <Button fx:id="btnDelete" text="Delete" onAction="#handleDelete" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" prefWidth="80.0" />
+               <Button fx:id="btnClear" text="Clear" onAction="#handleClear" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" prefWidth="80.0" />
+            </HBox>
+         </VBox>
+         
+         <!-- Table Panel -->
+         <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label text="Customers List" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+            
+            <TableView fx:id="tableCustomers" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="colCustomerId" text="ID" prefWidth="50.0" />
+                  <TableColumn fx:id="colFirstName" text="First Name" prefWidth="120.0" />
+                  <TableColumn fx:id="colLastName" text="Last Name" prefWidth="120.0" />
+                  <TableColumn fx:id="colEmail" text="Email" prefWidth="180.0" />
+                  <TableColumn fx:id="colPhoneNumber" text="Phone" prefWidth="120.0" />
+                  <TableColumn fx:id="colCity" text="City" prefWidth="100.0" />
+                  <TableColumn fx:id="colIsActive" text="Status" prefWidth="80.0" />
+               </columns>
+            </TableView>
+         </VBox>
+      </HBox>
+   </children>
+</VBox>
